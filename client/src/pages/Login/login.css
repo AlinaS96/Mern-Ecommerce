@@ -1,0 +1,5 @@
+.loginForm>button:disabled{
+    cursor: not-allowed;
+    color: green;
+
+}

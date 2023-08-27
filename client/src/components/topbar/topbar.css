@@ -1,0 +1,83 @@
+.topbar {
+    flex: 1;
+}
+
+.topbarWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search {
+    margin: 10px;
+    border: 1px solid rgb(180, 180, 180);
+    padding: 1px 5px;
+}
+
+.search>input {
+    margin-right: 5px;
+    border: none;
+}
+
+.signup {
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart>icon {
+    position: absolute;
+
+}
+
+.cart>span {
+    position: absolute;
+    background-color: rgb(0, 176, 176);
+    border-radius: 50%;
+    color: white;
+    width: 15px;
+    height: 15px;
+    font-size: 13px;
+    text-align: center;
+    left: 70%;
+    bottom: 40%;
+}
+
+.ticker {
+    background-color: rgb(0, 177, 177);
+    color: white;
+    height: 25px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+
+@media(max-width:600px) {
+    .logo>h1 {
+        margin-top: 8px;
+    }
+
+    .search {
+        border-radius: 9%;
+    }
+
+    .search>input {
+        height: 20px;
+        width: 60px;
+        margin: 0;
+    }
+
+    .search>searchIcon {
+        position: absolute;
+        right: 10%;
+    }
+}

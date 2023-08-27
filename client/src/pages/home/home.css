@@ -1,0 +1,13 @@
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    gap:25px;
+    margin-left: 20px;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    margin-left: 20px;
+}

@@ -1,0 +1,45 @@
+.newsletter {
+    height: 400px;
+    background-color: rgb(255, 224, 199);
+}
+
+.newsletterWrapper {
+    background-color: rgb(255, 224, 199);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletterWrapper>h1 {
+    font-size: 48px;
+    margin-top: 130px;
+}
+
+.newsletterWrapper>h5 {
+    font-size: 20px;
+    margin-top: 22px;
+}
+
+.Search {
+    display: flex;
+    width: 400px;
+    border: 1px solid rgb(210, 210, 210);
+    margin-top: 15px;
+}
+
+.searchInput>input {
+    width: 350px;
+    display: flex;
+    border: none;
+    height: 30px;
+}
+
+.playIcon {
+    width: 50px;
+    color: white;
+    background-color: teal;
+    border-radius: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

@@ -1,0 +1,31 @@
+.category{
+   display: inline-block;
+    object-fit: cover;
+    display: inline-block;
+    position: relative;
+    margin-top: 15px;
+}
+.category>img{
+    height:400px;
+    width:450px;
+    /* position: relative; */
+}
+.category>h1{
+position: absolute;
+display: inline-block;
+top:50%;
+left: 25%;
+font-size: 40px;
+width: 100px;
+color: white;
+}
+
+.category>button{
+position: absolute;
+background-color: white;
+padding:10px;
+z-index:100;
+top:85%;
+left:35%;
+border: none;
+}
