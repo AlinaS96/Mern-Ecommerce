@@ -29,6 +29,7 @@ async function verifyUser(req, res, next) {
 
 async function verifyAdmin(req, res, next) {
     const token = req.cookies.access_token
+    console.log(token,'here')
     if (!token) res.status(403).send('Unauthorized, absent token')
 
     jwt.verify(token, process.env.JWT, (err, user) => {

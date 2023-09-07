@@ -32,7 +32,9 @@ const cartSlice = createSlice({
             // const pos = state.products.map(e => e.productId).indexOf(action.payload.productId)
             const pos =state.products.findIndex(x=>x.productId===action.payload.productId)
             console.log(pos)
+            if(pos!==-1){
             state.products.splice(pos, 1)
+            }
         }
     }
 })

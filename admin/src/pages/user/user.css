@@ -1,0 +1,238 @@
+.editUser {
+    margin-left: 230px;
+    display: flex;
+    flex-direction: column;
+}
+
+.editUserTop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.editUserTop>button{
+    margin-right: 70px;
+    height:30px;
+    width:70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    color: white;
+    background-color: teal;
+    border: none;
+}
+
+.editUserWrapper {
+    display: flex;
+    gap: 15px;
+}
+
+.editUserInfo {
+    border-radius: 4%;
+    width: 430px;
+    height: 450px;
+    box-shadow: 1px 3px 5px gray;
+}
+
+.editUserTitle {
+    display: flex;
+    margin: 15px 15px 15px 30px;
+}
+
+.editUserTitle>img {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.username {
+    display: flex;
+    flex-direction: column;
+    height: 4rem;
+}
+
+.username>h5 {
+    margin: 10px 5px 1px 5px;
+    font-size: 15px;
+}
+
+.username>span {
+    margin: 0px 0px 10px 5px;
+    color: gray;
+}
+
+.accountDetails {
+    margin: 15px 15px 15px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.accountDetails>span {
+    font-weight: 600;
+    color: gray;
+    font-size: 13px;
+    margin: 10px 0px 10px 0px;
+}
+
+.accountName {
+    display: flex;
+    gap: 10px;
+}
+
+.accountDOB {
+    display: flex;
+    gap: 10px;
+}
+
+.accountContact {
+    margin: 15px 15px 15px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.accountContact>span {
+    font-weight: 600;
+    color: gray;
+    font-size: 13px;
+    margin: 10px 0px 10px 0px;
+}
+
+.accountNumber {
+    display: flex;
+    gap: 10px;
+}
+
+.accountEmail {
+    display: flex;
+    gap: 10px;
+}
+
+.accountLocation {
+    display: flex;
+    gap: 10px;
+}
+
+.editUserEdit {
+    /* width:52rem; */
+    width: 800px;
+    height: 450px;
+    box-shadow: 1px 3px 5px gray;
+    border-radius: 2%;
+
+}
+
+.editUserEdit>h3 {
+    margin-left: 30px;
+}
+
+.editWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.editForm {
+    margin-left: 30px;
+}
+
+.editUsername {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.editUsername>input{
+    border:none;
+    border-bottom: 1px solid rgb(175, 175, 175);
+    width:300px;
+}
+
+.editFullname {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.editFullname>input{
+    border:none;
+    border-bottom: 1px solid rgb(175, 175, 175);
+    width:300px;
+}
+
+.editEmail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.editEmail>input{
+    border:none;
+    border-bottom: 1px solid rgb(175, 175, 175);
+    width:300px;
+}
+
+.editPhone {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.editPhone>input{
+    border:none;
+    border-bottom: 1px solid rgb(175, 175, 175);
+    width:300px;
+}
+
+.editAddress {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.editAddress>input{
+    border:none;
+    border-bottom: 1px solid rgb(175, 175, 175);
+    width:300px;
+}
+
+.editFormRight {
+    display: flex;
+    flex-direction: column;
+    gap: 230px;
+    margin-right: 30px;
+}
+
+.editFormImage{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.editFormImage>img {
+    width: 100px;
+    height: 100px;
+}
+
+.editUpdateBtn{
+    color: white;
+    background-color: rgb(30, 0, 107);
+    border-radius: 5%;
+    border: none;
+    font-weight: 500;
+    font-size: 13px;
+    height: 30px;
+}
+
+@media screen and (max-width:700) {
+    .editUserWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}

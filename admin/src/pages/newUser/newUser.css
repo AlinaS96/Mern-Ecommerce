@@ -1,0 +1,164 @@
+.newUser{
+    margin-left:230px ;
+}
+.newUser>button{
+    margin-top: 30px;
+    color: white;
+    background-color: rgb(32, 2, 149);
+    border:none;
+    width:120px;
+    height: 25px;
+    border-radius: 10%;
+}
+.newUserWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+
+}
+
+.newUserUsername{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.newUserUsername>label{
+    color:gray;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.newUserUsername>input{
+    width:500px;
+    height: 40px;
+    border-radius: 2%;
+    border: 1px solid gray
+}
+
+.newUserFullname{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.newUserFullname>label{
+    color:gray;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.newUserFullname>input{
+    width:500px;
+    height: 40px;
+    border-radius: 2%;
+    border: 1px solid gray
+}
+
+.newUserEmail{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.newUserEmail>label{
+    color:gray;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.newUserEmail>input{
+    width:500px;
+    height: 40px;
+    border-radius: 2%;
+    border: 1px solid gray
+}
+
+.newUserPassword{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.newUserPassword>label{
+    color:gray;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.newUserPassword>input{
+    width:500px;
+    height: 40px;
+    border-radius: 2%;
+    border: 1px solid gray
+}
+
+.newUserPhone{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.newUserPhone>label{
+    color:gray;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.newUserPhone>input{
+    width:500px;
+    height: 40px;
+    border-radius: 2%;
+    border: 1px solid gray
+}
+
+.newUserAddress{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.newUserAddress>label{
+    color:gray;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.newUserAddress>input{
+    width:500px;
+    height: 40px;
+    border-radius: 2%;
+    border: 1px solid gray
+}
+
+.newUserGender{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.newUserGender>legend{
+    color:gray;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.newUserActive{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.newUserActive>label{
+    color:gray;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.newUserActive>select{
+    width:500px;
+    height: 40px;
+    border-radius: 2%;
+    border: 1px solid gray;
+}

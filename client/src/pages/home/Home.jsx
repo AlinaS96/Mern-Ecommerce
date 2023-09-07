@@ -45,7 +45,7 @@ const Home = () => {
           <Category category={category} />
         ))}
       </div>
-      <div className="products">
+      <div className="Products">
         {products.map((product) => (
           <Product product={product} key={product._id} />
         ))}

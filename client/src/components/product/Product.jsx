@@ -19,7 +19,7 @@ const Product = ({ product }) => {
   const productClick = () => {
     navigate(`/products/${product._id}`)
   }
-  
+
   const addCartClick = async () => {
     if (user) {
       setQuantity(prevCount => prevCount + 1)
@@ -31,23 +31,25 @@ const Product = ({ product }) => {
     }
   }
   useEffect(() => {
-    const updateCart = async () => {
-      const res = await axios.get(`http://localhost:8800/cart/find/${user.details._id}`, {
-        headers: { "Content-Type": "application/json" },
-        withCredentials: true
-      })
-      
-      axios.put(`http://localhost:8800/cart/${res.data._id}`, { products: cart.products }, {
-        headers: { "Content-Type": "application/json" },
-        withCredentials: true
-      }).then(res => { console.log(res) }).catch(err => { console.log(err) })
-    }; updateCart()
+    if (user) {
+      const updateCart = async () => {
+        const res = await axios.get(`http://localhost:8800/cart/find/${user?.details._id}`, {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: true
+        })
+
+        axios.put(`http://localhost:8800/cart/${res.data._id}`, { products: cart.products }, {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: true
+        }).then(res => { console.log(res) }).catch(err => { console.log(err) })
+      };updateCart()
+    } 
   }, [cart])
 
   return (
     <div className="product" onMouseEnter={() => setIsShown(true)}
       onMouseLeave={() => setIsShown(false)} >
-      <img src={product.img} alt="" />
+      <img src={product?.img} alt="" />
       {isShown && <div className="icons">
         <FontAwesomeIcon className="icon" onClick={addCartClick} icon={faCartShopping} />
         <FontAwesomeIcon className="icon" onClick={productClick} icon={faMagnifyingGlass} />

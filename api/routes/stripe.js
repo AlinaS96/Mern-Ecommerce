@@ -7,14 +7,14 @@ const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 
 const router = express.Router()
 router.post('/create-checkout-session', async (req, res) => {
-  console.log(req.body,'here');
-  const customer = await stripe.customers.create({
+  // console.log(req.body,'here');
+  // const customer = await stripe.customers.create({
     
-    metadata: {
-      userId: req.body.user,
-      cart: JSON.stringify(req.body.products)
-    }
-  })
+  //   metadata: {
+  //     userId: req.body.user,
+  //     cart: JSON.stringify(req.body.products)
+  //   }
+  // })
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     shipping_address_collection: {
@@ -25,10 +25,10 @@ router.post('/create-checkout-session', async (req, res) => {
         shipping_rate_data: {
           type: 'fixed_amount',
           fixed_amount: {
-            amount: req.body.totalPrice < 50 ? 1000 : 0,
+            amount: req.body.products[0].price < 50 ? 1000 : 0,
             currency: 'usd',
           },
-          display_name: req.body.totalPrice < 50 ? 'Standard Shipping' : 'Free shipping',
+          display_name: req.body.products[0].price < 50 ? 'Standard Shipping' : 'Free shipping',
           delivery_estimate: {
             minimum: {
               unit: 'business_day',
@@ -67,12 +67,12 @@ router.post('/create-checkout-session', async (req, res) => {
         price_data: {
           currency: 'usd',
           product_data: {
-            name: `${item.productId}`,
-            // Images:[item.image] ,
+            name: `${item.title}`,
+            // Images:[item.img] ,
             // description:item.desc,
             // metadata:{id:utem.id}
           },
-          unit_amount: (req.body.totalPrice / req.body.products.length) * 100
+          unit_amount: (item.price) * 100
         },
         quantity: item.quantity
       }
@@ -87,7 +87,7 @@ router.post('/create-checkout-session', async (req, res) => {
     //       type: 'text',
     //     },
     //   ],
-    customer: customer.id,
+    // customer: customer.id,
     mode: 'payment',
     success_url: `${process.env.CLIENT_URL}/checkout-success`,
     cancel_url: `${process.env.CLIENT_URL}/cart`,

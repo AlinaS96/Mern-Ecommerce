@@ -1,0 +1,29 @@
+.cards{
+    display: flex;
+    justify-content: space-around;
+    /* gap:20px; */
+}
+
+.lineChart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px 0px 0px 20px;
+}
+.lineChart>h7{
+    margin-left: 25px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.widgets{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media(max-width:700){
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+}

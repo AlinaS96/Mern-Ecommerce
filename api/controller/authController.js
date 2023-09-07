@@ -27,7 +27,7 @@ async function login(req, res, next) {
 
         const token = jwt.sign({ id: user.id, admin: user.isAdmin }, process.env.JWT)
         const { isAdmin, password, ...otherDetails } = user._doc
-        res.cookie("access_token", token, { httpOnly: true }).status(200).send({ details: { ...otherDetails } })
+        res.cookie("access_token", token).status(200).send({ details: { ...otherDetails }, isAdmin })
     } catch (err) {
         next(err)
     }

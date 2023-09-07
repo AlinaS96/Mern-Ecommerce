@@ -22,10 +22,10 @@ const Cart = () => {
     const id = user.currentUser.details._id
     const handleCheckout = () => {
 
-        // axios.post("http://localhost:8800/stripe/create-checkout-session", res.data)
-        // .then((res)=>{if(res.data.url){
-        //     window.location.href = res.data.url
-        // }}).catch(err=>{console.log(err)})
+        axios.post("http://localhost:8800/stripe/create-checkout-session", {products:cartProducts})
+        .then((res)=>{if(res.data.url){
+            window.location.href = res.data.url
+        }}).catch(err=>{console.log(err)})
 
     }
     useEffect(() => {
@@ -41,7 +41,7 @@ const Cart = () => {
                 console.log(err)
             }
         }; getCartProducts()
-    }, [cart, id])
+    }, [])
     useEffect(() => {
         const setQuantityArr = () => {
             const qtyArr = Object.values(cartProducts).map((prod) => {
@@ -90,6 +90,7 @@ const Cart = () => {
         dispatch(removeProduct({ productId: product.productId }))
         // navigate('/cart')
     }
+    console.log(cartProducts)
     return (
         <>
             <div className='cart'>
@@ -120,10 +121,9 @@ const Cart = () => {
                                             onClick={() => IncQty(index, product)}>
                                             +
                                         </button>
-                                        {/* <span className='count'>{qtyArr[index]}</span> */}
-                                        <span className='count'>{product.quantity}</span>
-                                        <button className="minusBtn" disabled={qtyArr[index] === 1}
-                                            onClick={ () => { DecQty(index, product) }}>
+                                        <span className='count'>{qtyArr[index]}</span>
+                                        <button className="minusBtn" disabled={qtyArr[index] === 0}
+                                            onClick={qtyArr[index]===1? ()=>{removeItem(product)}:() => { DecQty(index, product) }}>
                                             -
                                         </button>
                                     </div>
